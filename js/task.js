@@ -21,19 +21,19 @@ const base_message = 'Press the UP arrow key to select the top flowerbed and the
 var script_picker = Math.floor((Math.random() * 999) + 0)
 
 
-XYData = $ .get(parentFolder + `stimuli/stimuli_${script_picker}.csv`, function(){
+XYData = $ .get(parentFolder + `../stimuli/stimuli_${script_picker}.csv`, function(){
     XYActual = Papa.parse(XYData.responseText, {
 	dynamicTyping: true
     })
 })
 
-TrainingData1 = $ .get(parentFolder + `training/training_1.csv`, function(){
+TrainingData1 = $ .get(parentFolder + `../training/training_1.csv`, function(){
     TrainingActual1 = Papa.parse(TrainingData1.responseText, {
 	dynamicTyping: true
     })
 })
 
-TrainingData2 = $ .get(parentFolder + `training/training_2.csv`, function(){
+TrainingData2 = $ .get(parentFolder + `../training/training_2.csv`, function(){
     TrainingActual2 = Papa.parse(TrainingData2.responseText, {
 	dynamicTyping: true
     })
@@ -66,10 +66,14 @@ var instruction_trial = {
     stimulus_height: 800,
     stimulus_width: 800,
     on_start: function(trial){
-	trial.stimulus = parentFolder + 'tutorial/' + 'tutorial' + instruction_picker + '.png'
+	var tutorialFolder = parentFolder + 'tutorial/'
+	if (instruction_picker == 46 || instruction_picker == 47){
+	    tutorialFolder = tutorialFolder + task_type + '/' 
+	}
+	trial.stimulus =  tutorialFolder + 'tutorial' + instruction_picker + '.png'
     },
     on_finish: function(trial){
-	instruction_picker = instruction_picker + 1
+	instruction_picker += 1
     }
 };
 
