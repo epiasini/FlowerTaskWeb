@@ -151,7 +151,13 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	  Control: [400.         394.95184342]
 	  End: [417.98073737 305.04815658]
 	*/
-	var line_top = new fabric.Path('M 382 305 Q 400, 395, 418, 305', { fill: '', stroke: 'black', objectCaching: false, strokeWidth: 5 });
+	var line_top = new fabric.Path(
+	    'M 382 305 Q 400, 395, 418, 305',
+	    {fill: '',
+	     stroke: 'black',
+	     objectCaching: false,
+	     strokeWidth: 5
+	    });
 	line_top.selectable = false;
 	
 
@@ -236,7 +242,13 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	  Control: [400.         405.04815658]
 	  End: [417.98073737 494.95184342]
 	*/
-	var line_bottom = new fabric.Path('M 382 495 Q 400, 405, 418, 495', { fill: '', stroke: 'black', objectCaching: false, strokeWidth: 5 });
+	var line_bottom = new fabric.Path(
+	    'M 382 495 Q 400, 405, 418, 495',
+	    {fill: '',
+	     stroke: 'black',
+	     objectCaching: false,
+	     strokeWidth: 5
+	    });
 	line_bottom.selectable = false;
 
 
