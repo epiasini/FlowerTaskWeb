@@ -154,6 +154,30 @@ End: [417.98073737 305.04815658]
 var line_top = new fabric.Path('M 382 305 Q 400, 395, 418, 305', { fill: '', stroke: 'black', objectCaching: false, strokeWidth: 5 });
 line_top.selectable = false;
  
+
+/*
+-------Unflipped circular arc--------
+Center: [400.         318.16901138]
+Radius: 31.830988618379024
+
+Note that 'angle' is in degrees but 'startAngle' and 'endAngle' are in radians!!!!
+*/
+
+var circle = new fabric.Circle({
+  radius: 32,
+  left: 400,
+  top: 318,
+  angle: 90,
+  startAngle: -Math.PI / 2,
+  endAngle: Math.PI / 2,
+  stroke: 'black',
+  strokeWidth: 5,
+  fill: '',
+  originX: 'center',
+  originY: 'center'
+});
+
+
 /*
 ------Unflipped base-------
 Start: [350. 450.]
@@ -214,6 +238,32 @@ End: [417.98073737 494.95184342]
 */
 var line_bottom = new fabric.Path('M 382 495 Q 400, 405, 418, 495', { fill: '', stroke: 'black', objectCaching: false, strokeWidth: 5 });
 line_bottom.selectable = false;
+
+
+/*
+-------Flipped circular arc--------
+------Flipped circle-------
+Center: [400.         481.83098862]
+Radius: 31.830988618379024
+
+Note that 'angle' is in degrees but 'startAngle' and 'endAngle' are in radians!!!!
+*/
+
+var circle = new fabric.Circle({
+  radius: 32,
+  left: 400,
+  top: 482,
+  angle: 90,
+  startAngle: -Math.PI / 2,
+  endAngle: Math.PI / 2,
+  stroke: 'black',
+  strokeWidth: 5,
+  fill: '',
+  originX: 'center',
+  originY: 'center'
+});
+
+
 
       var orientation = trial.data[0]
       

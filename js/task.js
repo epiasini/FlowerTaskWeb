@@ -250,8 +250,6 @@ timeline.push(tutorial_block_help)
 timeline.push(training_help_reset_trial)
 timeline.push(tutorial_block_no_help)
 timeline.push(training_no_help_reset_trial)
-//timeline.push(experiment_block)
-//timeline.push(reset_block)
 timeline.push(experiment_reset_block)
 
 var pavlovia_finish = {
