@@ -168,8 +168,7 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 
 	  Note that 'angle' is in degrees but 'startAngle' and 'endAngle' are in radians!!!!
 	*/
-
-	var circle = new fabric.Circle({
+	var circle_top = new fabric.Circle({
 	    radius: 32,
 	    left: 400,
 	    top: 318,
@@ -260,12 +259,11 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 
 	  Note that 'angle' is in degrees but 'startAngle' and 'endAngle' are in radians!!!!
 	*/
-
-	var circle = new fabric.Circle({
+	var circle_bottom = new fabric.Circle({
 	    radius: 32,
 	    left: 400,
 	    top: 482,
-	    angle: 90,
+	    angle: -90,
 	    startAngle: -Math.PI / 2,
 	    endAngle: Math.PI / 2,
 	    stroke: 'black',
@@ -320,6 +318,16 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    canvas.add(base_bottom) 
 	    canvas.add(line_top)
 	    break;  
+
+	case 8:
+	    canvas.add(base_top)
+	    canvas.add(circle_bottom)
+	    break;
+
+	case 9:
+	    canvas.add(base_bottom)
+	    canvas.add(circle_top)
+	    break;
 	}
 	
 
