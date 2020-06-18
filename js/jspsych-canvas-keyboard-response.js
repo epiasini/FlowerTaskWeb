@@ -103,7 +103,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    fill: 'black',
 	    stroke: 'black',
 	    originX : 'center',
-	    originY : 'center'
+	    originY : 'center',
+	    selectable: false
 	});
 
 	/*
@@ -116,7 +117,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    fill: 'black',
 	    stroke: 'black',
 	    originX : 'center',
-	    originY : 'center'    
+	    originY : 'center',
+	    selectable: false
 	});
 
 	/*
@@ -129,7 +131,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    fill: 'black',
 	    stroke: 'black',
 	    originX : 'center',
-	    originY : 'center'
+	    originY : 'center',
+	    selectable: false
 	});
 
 	/*
@@ -142,7 +145,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
             left: 400,
             top: 350,
             originX : 'center',
-            originY : 'center'
+            originY : 'center',
+	    selectable: false
         });
 
 	/*
@@ -156,9 +160,9 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    {fill: '',
 	     stroke: 'black',
 	     objectCaching: false,
-	     strokeWidth: 5
+	     strokeWidth: 5,
+	     selectable: false
 	    });
-	line_top.selectable = false;
 	
 
 	/*
@@ -179,7 +183,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    strokeWidth: 5,
 	    fill: '',
 	    originX: 'center',
-	    originY: 'center'
+	    originY: 'center',
+	    selectable: false
 	});
 
 
@@ -193,7 +198,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    fill: 'black',
 	    stroke: 'black',
 	    originX : 'center',
-	    originY : 'center'
+	    originY : 'center',
+	    selectable: false
 	});
 
 	/*
@@ -206,7 +212,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    fill: 'black',
 	    stroke: 'black',
 	    originX : 'center',
-	    originY : 'center'
+	    originY : 'center',
+	    selectable: false
 	});
 
 	/*
@@ -219,7 +226,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    fill: 'black',
 	    stroke: 'black',
 	    originX : 'center',
-	    originY : 'center'
+	    originY : 'center',
+	    selectable: false
 	});
 
 	/*
@@ -232,7 +240,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
             left: 400,
             top: 450,
             originX : 'center',
-            originY : 'center'
+            originY : 'center',
+	    selectable: false
         });
 
 	/*
@@ -248,8 +257,6 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	     objectCaching: false,
 	     strokeWidth: 5
 	    });
-	line_bottom.selectable = false;
-
 
 	/*
 	  -------Flipped circular arc--------
@@ -270,7 +277,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    strokeWidth: 5,
 	    fill: '',
 	    originX: 'center',
-	    originY: 'center'
+	    originY: 'center',
+	    selectable: false
 	});
 
 
@@ -357,7 +365,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 		left:  trial.data[3],
 		top: trial.data[4],
 		originX : 'center',
-		originY : 'center'
+		originY : 'center',
+		selectable: false
 	    }); 
 	    canvas.add(ball_helper)
 	}
@@ -372,7 +381,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
       		left:  trial.data[5+2*i],
       		top: trial.data[6+2*i],
       		originX : 'center',
-      		originY : 'center'
+      		originY : 'center',
+		selectable: false
 	    }));
 	}
 	canvas.add(...seeds)
