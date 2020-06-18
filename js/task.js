@@ -105,10 +105,10 @@ var tutorial_trial_help = {
     on_finish: function(trial){
 	
 	trial_counter_block += 1
-	if( TrainingActual1.data[rw][1] === 0 && trial.key_press === 38){
+	if( TrainingActual1.data[rw][2] === 0 && trial.key_press === 38){
 	    block_score += 1
 	}
-        if( TrainingActual1.data[rw][1] === 1 && trial.key_press === 40){
+        if( TrainingActual1.data[rw][2] === 1 && trial.key_press === 40){
 	    block_score += 1
 	    
 	}
@@ -130,10 +130,10 @@ var tutorial_trial_no_help = {
     on_finish: function(trial){
 
 	trial_counter_block += 1
-	if( TrainingActual2.data[rw][1] === 0 && trial.key_press === 38){
+	if( TrainingActual2.data[rw][2] === 0 && trial.key_press === 38){
 	    block_score += 1
 	}
-        if( TrainingActual2.data[rw][1] === 1 && trial.key_press === 40){
+        if( TrainingActual2.data[rw][2] === 1 && trial.key_press === 40){
 	    block_score += 1
 	}
 	rw += 1  
@@ -160,10 +160,10 @@ var test_trial = {
         trial_counter = trial_counter + 1
 	trial_counter_block += 1
 	
-	if( XYActual.data[rw][1] === 0 && trial.key_press === 38){
+	if( XYActual.data[rw][2] === 0 && trial.key_press === 38){
 	    block_score += 1
 	}
-        if( XYActual.data[rw][1] === 1 && trial.key_press === 40){
+        if( XYActual.data[rw][2] === 1 && trial.key_press === 40){
 	    block_score += 1
 	}
 	rw += 1   
@@ -262,7 +262,11 @@ jsPsych.init({
     timeline: timeline,
     preload: [XYData, TrainingData1, TrainingData2],
     on_data_update: function(data){
-	jsPsych.data.get().addToLast({Script_Picker: script_picker})},
+	jsPsych.data.get().addToLast({Script_Picker: script_picker})
+	/* // DEBUG
+	jsPsych.data.get().localSave('csv','testdata.csv')
+	*/
+    },
 
 
     on_finish: function() {

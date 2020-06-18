@@ -274,9 +274,27 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	});
 
 
-	
+	/*
+	  trial.data contains the following columns:
 
-	var orientation = trial.data[0]
+	  0. TrueLocationParameter
+	  1. Configuration
+	  2. TrueModelUpDown
+	  3. TrueLocationP
+	  4. TrueLocationQ
+	  5. P0
+	  6. Q0
+	  7. P1
+	  8. Q1
+	  ...
+	  23. P9
+	  24. Q9
+
+	  Note that TrueLocationParameter is only included for reference and is not required for running the experiment.
+
+	*/
+
+	var orientation = trial.data[1]
 	
 	switch(orientation){
         case 0:
@@ -336,8 +354,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    var ball_helper = new fabric.Circle({
 		radius: 7,
 		fill: 'orange',
-		left:  trial.data[2],
-		top: trial.data[3],
+		left:  trial.data[3],
+		top: trial.data[4],
 		originX : 'center',
 		originY : 'center'
 	    }); 
@@ -351,8 +369,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    seeds.push(new fabric.Circle({
       		radius: 5,
       		fill: 'red',
-      		left:  trial.data[4+2*i],
-      		top: trial.data[5+2*i],
+      		left:  trial.data[5+2*i],
+      		top: trial.data[6+2*i],
       		originX : 'center',
       		originY : 'center'
 	    }));
