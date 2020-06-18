@@ -255,7 +255,8 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    {fill: '',
 	     stroke: 'black',
 	     objectCaching: false,
-	     strokeWidth: 5
+	     strokeWidth: 5,
+	     selectable: false
 	    });
 
 	/*
