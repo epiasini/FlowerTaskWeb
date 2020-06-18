@@ -18,7 +18,7 @@ var parentFolder = jsFileLocation.replace('task.js', '') + '../';
 
 const base_message = 'Press the UP arrow key to select the top flowerbed and the DOWN arrow key to select the bottom flowerbed'
 
-var script_picker = Math.floor((Math.random() * 999) + 0)
+var script_picker = Math.floor((Math.random() * 4999) + 0)
 
 
 XYData = $ .get(parentFolder + `../stimuli/stimuli_${script_picker}.csv`, function(){
