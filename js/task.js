@@ -59,6 +59,30 @@ var consent = {
 }
 timeline.push(consent)
 
+var Gender_options = ["Male", "Female", "Transgender", "Do Not Wish To Say"];
+var Ethnicity_options = ["American Indian or Alaskan Native","Asian","Black or African American","Native Hawaiian or Pacific Islander","White","Hispanic or Latino","Other","Do Not Wish to Respond"]
+var demographics = {
+	type: "survey-multi-choice",
+	questions: [{prompt:"Gender Orientation:", options: Gender_options, required:true,}, 
+	{prompt:"Ethnicity:", options: Ethnicity_options, required:true}],
+	   };
+var age = {
+type: "survey-text",
+questions: [{prompt: "How old are you?"}],
+post_trial_gap: 100
+	   };
+
+var ProlificID = {
+type: "survey-text",
+questions: [{prompt: "Please Enter your ProlificID"}],
+post_trial_gap: 100
+	   };
+
+timeline.push(demographics)	   
+timeline.push(age)
+timeline.push(ProlificID)
+	   
+
 var instruction_trial = {
     type: 'image-keyboard-response',
     stimulus: '',
