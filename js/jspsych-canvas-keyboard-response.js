@@ -479,12 +479,12 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 
 	case 10:
 	    canvas.add(rounded_base_top)
-	    canvas.add(rounded_bottom)
+	    canvas.add(...rounded_bottom)
 	    break;
 	    
 	case 11:
 	    canvas.add(rounded_base_bottom)
-	    canvas.add(rounded_top)
+	    canvas.add(...rounded_top)
 	    break;
 	}
 	
