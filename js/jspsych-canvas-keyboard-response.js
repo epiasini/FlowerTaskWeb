@@ -187,6 +187,127 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    selectable: false
 	});
 
+	/*
+	------Unflipped rounded-------
+	Start left: [331.85042093 316.26523329]
+	Joint left: [359.54914916 354.38926204]
+	Joint right: [440.45085084 354.38926204]
+	End right: [468.14957907 316.26523329]
+	Circle center: [400. 325.]
+	Circle radius: 50.0
+	Circle angle/π: 0.6
+	Base circle center: [400. 325.]
+	Base circle radius: 100.0
+	Base circle angle/π: 0.6
+	*/
+
+	var rounded_top = [];
+	rounded_top.push(new fabric.Line([331.85,316.27,359.55,354.39],{
+	    strokeWidth: 5,
+	    fill: 'black',
+	    stroke: 'black',
+	    originX : 'center',
+	    originY : 'center',
+	    selectable: false
+	}));
+	rounded_top.push(new fabric.Circle({
+	    radius: 50,
+	    left: 400,
+	    top: 325,
+	    angle: 90,
+	    startAngle: -0.6* Math.PI / 2,
+	    endAngle: 0.6*Math.PI / 2,
+	    stroke: 'black',
+	    strokeWidth: 5,
+	    fill: '',
+	    originX: 'center',
+	    originY: 'center',
+	    selectable: false
+	}));
+	rounded_top.push(new fabric.Line([440.45,354.39,468.15,316.27],{
+	    strokeWidth: 5,
+	    fill: 'black',
+	    stroke: 'black',
+	    originX : 'center',
+	    originY : 'center',
+	    selectable: false
+	}));
+
+	var rounded_base_bottom = new fabric.Circle({
+	    radius: 100,
+	    left: 400,
+	    top: 325,
+	    angle: 90,
+	    startAngle: -0.6* Math.PI / 2,
+	    endAngle: 0.6*Math.PI / 2,
+	    stroke: 'black',
+	    strokeWidth: 5,
+	    fill: '',
+	    originX: 'center',
+	    originY: 'center',
+	    selectable: false
+	}); 
+
+	/*
+	------Flipped rounded-------
+	Start left: [331.85042093 483.73476671]
+	Joint left: [359.54914916 445.61073796]
+	Joint right: [440.45085084 445.61073796]
+	End right: [468.14957907 483.73476671]
+	Circle center: [400. 475.]
+	Circle radius: 50.0
+	Circle angle/π: 0.6
+	Base circle center: [400. 475.]
+	Base circle radius: 100.0
+	Base circle angle/π: 0.6
+	*/
+
+	var rounded_bottom = [];
+	rounded_bottom.push(new fabric.Line([331.85,483.73,359.55,445.61],{
+	    strokeWidth: 5,
+	    fill: 'black',
+	    stroke: 'black',
+	    originX : 'center',
+	    originY : 'center',
+	    selectable: false
+	}));
+	rounded_bottom.push(new fabric.Circle({
+	    radius: 50,
+	    left: 400,
+	    top: 475,
+	    angle: -90,
+	    startAngle: -0.6* Math.PI / 2,
+	    endAngle: 0.6*Math.PI / 2,
+	    stroke: 'black',
+	    strokeWidth: 5,
+	    fill: '',
+	    originX: 'center',
+	    originY: 'center',
+	    selectable: false
+	}));
+	rounded_bottom.push(new fabric.Line([440.45,445.61,468.15,483.73],{
+	    strokeWidth: 5,
+	    fill: 'black',
+	    stroke: 'black',
+	    originX : 'center',
+	    originY : 'center',
+	    selectable: false
+	}));
+
+	var rounded_base_top = new fabric.Circle({
+	    radius: 100,
+	    left: 400,
+	    top: 475,
+	    angle: -90,
+	    startAngle: -0.6* Math.PI / 2,
+	    endAngle: 0.6*Math.PI / 2,
+	    stroke: 'black',
+	    strokeWidth: 5,
+	    fill: '',
+	    originX: 'center',
+	    originY: 'center',
+	    selectable: false
+	}); 
 
 	/*
 	  ------Unflipped base-------
@@ -354,6 +475,16 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	case 9:
 	    canvas.add(base_bottom)
 	    canvas.add(circle_top)
+	    break;
+
+	case 10:
+	    canvas.add(rounded_base_top)
+	    canvas.add(rounded_bottom)
+	    break;
+	    
+	case 11:
+	    canvas.add(rounded_base_bottom)
+	    canvas.add(rounded_top)
 	    break;
 	}
 	

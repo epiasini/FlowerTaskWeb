@@ -11,7 +11,7 @@ var pavlovia_init = {
     type: "pavlovia",
     command: "init"
 };
-timeline.push(pavlovia_init);
+// timeline.push(pavlovia_init);
 
 var jsFileLocation = $('script[src*=task]').attr('src');
 var parentFolder = jsFileLocation.replace('task.js', '') + '../';
