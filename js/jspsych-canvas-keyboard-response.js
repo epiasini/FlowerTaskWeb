@@ -189,20 +189,20 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 
 	/*
 	------Unflipped rounded-------
-	Start left: [331.85042093 316.26523329]
-	Joint left: [359.54914916 354.38926204]
-	Joint right: [440.45085084 354.38926204]
-	End right: [468.14957907 316.26523329]
-	Circle center: [400. 325.]
-	Circle radius: 50.0
+	Start left: [342.49101705 311.88472262]
+	Joint left: [375.72949052 357.63355655]
+	Joint right: [424.27050948 357.63355655]
+	End right: [457.50897997 311.88472671]
+	Circle center: [400. 340.]
+	Circle radius: 29.999999999999993
 	Circle angle/π: 0.6
-	Base circle center: [400. 325.]
-	Base circle radius: 100.0
+	Base circle center: [400. 340.]
+	Base circle radius: 90.0
 	Base circle angle/π: 0.6
 	*/
 
 	var rounded_top = [];
-	rounded_top.push(new fabric.Line([331.85,316.27,359.55,354.39],{
+	rounded_top.push(new fabric.Line([342.49,311.88,375.72,357.63],{
 	    strokeWidth: 5,
 	    fill: 'black',
 	    stroke: 'black',
@@ -211,9 +211,9 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    selectable: false
 	}));
 	rounded_top.push(new fabric.Circle({
-	    radius: 50,
+	    radius: 30,
 	    left: 400,
-	    top: 325,
+	    top: 340,
 	    angle: 90,
 	    startAngle: -0.6* Math.PI / 2,
 	    endAngle: 0.6*Math.PI / 2,
@@ -224,7 +224,7 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    originY: 'center',
 	    selectable: false
 	}));
-	rounded_top.push(new fabric.Line([440.45,354.39,468.15,316.27],{
+	rounded_top.push(new fabric.Line([424.27,357.63,457.51,311.88],{
 	    strokeWidth: 5,
 	    fill: 'black',
 	    stroke: 'black',
@@ -234,9 +234,9 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	}));
 
 	var rounded_base_bottom = new fabric.Circle({
-	    radius: 100,
+	    radius: 90,
 	    left: 400,
-	    top: 325,
+	    top: 340,
 	    angle: 90,
 	    startAngle: -0.6* Math.PI / 2,
 	    endAngle: 0.6*Math.PI / 2,
@@ -250,20 +250,20 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 
 	/*
 	------Flipped rounded-------
-	Start left: [331.85042093 483.73476671]
-	Joint left: [359.54914916 445.61073796]
-	Joint right: [440.45085084 445.61073796]
-	End right: [468.14957907 483.73476671]
-	Circle center: [400. 475.]
-	Circle radius: 50.0
+	Start left: [342.49101705 488.11527738]
+	Joint left: [375.72949052 442.36644345]
+	Joint right: [424.27050948 442.36644345]
+	End right: [457.50897997 488.11527329]
+	Circle center: [400. 460.]
+	Circle radius: 29.999999999999993
 	Circle angle/π: 0.6
-	Base circle center: [400. 475.]
-	Base circle radius: 100.0
+	Base circle center: [400. 460.]
+	Base circle radius: 90.0
 	Base circle angle/π: 0.6
 	*/
 
 	var rounded_bottom = [];
-	rounded_bottom.push(new fabric.Line([331.85,483.73,359.55,445.61],{
+	rounded_bottom.push(new fabric.Line([342.49,488.12,375.72,442.37],{
 	    strokeWidth: 5,
 	    fill: 'black',
 	    stroke: 'black',
@@ -272,9 +272,9 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    selectable: false
 	}));
 	rounded_bottom.push(new fabric.Circle({
-	    radius: 50,
+	    radius: 30,
 	    left: 400,
-	    top: 475,
+	    top: 460,
 	    angle: -90,
 	    startAngle: -0.6* Math.PI / 2,
 	    endAngle: 0.6*Math.PI / 2,
@@ -285,7 +285,7 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	    originY: 'center',
 	    selectable: false
 	}));
-	rounded_bottom.push(new fabric.Line([440.45,445.61,468.15,483.73],{
+	rounded_bottom.push(new fabric.Line([424.27,442.37,457.51,488.12],{
 	    strokeWidth: 5,
 	    fill: 'black',
 	    stroke: 'black',
@@ -295,9 +295,9 @@ jsPsych.plugins["canvas-keyboard-response"] = (function() {
 	}));
 
 	var rounded_base_top = new fabric.Circle({
-	    radius: 100,
+	    radius: 90,
 	    left: 400,
-	    top: 475,
+	    top: 460,
 	    angle: -90,
 	    startAngle: -0.6* Math.PI / 2,
 	    endAngle: 0.6*Math.PI / 2,
